@@ -8,11 +8,11 @@ other song info.
 
 ## Installation
 ```bash
-git clone https://github.com/ChingChang9/jack-sparrow.git
+npm install @chingchang9/jack-sparrow
 mkdir jack-sparrow/tortuga
 ```
 
-## Usage
+## Example usage
 ```bash
 node . https://www.youtube.com/watch?v=md7dK5-qvHc
 ```
