@@ -6,7 +6,9 @@ const reader = require("readline").createInterface({
 });
 
 module.exports = async videoTitle => {
-	const [ artist, songTitle ] = getArtistTitle(videoTitle);
+	const [ artist, songTitle ] = getArtistTitle(videoTitle, {
+		defaultArtist: "Anonymous"
+	});
 	return await geniusRequest(`search?q=${ songTitle } ${ artist }`).then(async data => {
 		let entry;
 		let noConfirm = false;
@@ -30,8 +32,8 @@ module.exports = async videoTitle => {
 	});
 };
 
-function getInput(promptText, fallback = r => r) {
+function getInput(promptText, callback = r => r) {
 	return new Promise(resolve => {
-		reader.question(promptText + " ", response => resolve(fallback(response)));
+		reader.question(promptText + " ", response => resolve(callback(response)));
 	});
 }

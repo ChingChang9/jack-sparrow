@@ -1,7 +1,7 @@
 {
   "name": "@chingchang9/jack-sparrow",
-  "version": "1.0.1",
-  "description": "Not all treasure is gold and silver, mate",
+  "version": "1.0.2",
+  "description": "Not all treasure is silver and gold, mate",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
